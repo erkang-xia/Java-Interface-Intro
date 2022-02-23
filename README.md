@@ -124,4 +124,3 @@ It could be the lack of consistency. It is a matter of convenience rather than d
 Static inner classes in interfaces were allowed because that's pure syntactic sugar - the inner class isn't actually anything to do with the parent class.
 So static methods aren't allowed simply because there's no compelling reason to do so; consistency isn't sufficiently compelling to change the status quo.
 Of course, this could be permitted in future JLS versions without breaking anything.
-![image](https://user-images.githubusercontent.com/92690031/155379051-56fbad13-0049-4653-967c-f17600381d79.png)
