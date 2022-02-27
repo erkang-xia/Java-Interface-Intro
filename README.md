@@ -6,9 +6,9 @@ Similar to blueprints, [interfaces](https://www.w3schools.com/java/java_interfac
 
 ## Why we need it?
 
-With interfaces, we can achieve [loose coupling](https://www.geeksforgeeks.org/coupling-in-java/?ref=gcse) and security by hiding details and revealing only the critical details of an object. It makes the scaling process so much easier. Additionally, it provides the possibility of "multi-inheritance." Java does not allow the concept of "many inheritance" (a class can only inherit from one parent class). However, with interfaces, the class can now implement multiple interfaces. 
+With interfaces, we can achieve [loose coupling](https://www.geeksforgeeks.org/coupling-in-java/?ref=gcse) and security by hiding details and revealing only the critical details of an object. It makes the scaling process so much easier. Additionally, it provides the possibility of "multi-[inheritance](https://www.geeksforgeeks.org/inheritance-in-java/?ref=gcse)." Java does not allow the concept of "many inheritance" (a class can only inherit from one parent class). However, with interfaces, the class can now implement multiple interfaces. 
  
-Interfaces are used to implement abstractions. Thus, a frequently asked question is why we use interfaces when abstract classes are available. The reason is that abstract classes may contain non-final variables, whereas variables in the interface are final, public, and static.
+Interfaces are used to implement [abstractions](https://www.geeksforgeeks.org/abstraction-in-java-2/?ref=gcse). Thus, a frequently asked question is why we use interfaces when abstract classes are available. The reason is that abstract classes may contain non-final variables, whereas variables in the interface are final, public, and static.
 
 ## New Features Added in Interfaces in JDK 8
 
@@ -40,8 +40,8 @@ public interface MyInterface {
 ## Questions:
 
 ### Why do we even need the static method in the interface?
-1.	Construction is part of the implementation, not the interface. Any code that works successfully with the interface doesn't care about the constructor. Any code that cares about the constructor needs to know the concrete type anyway, and the interface can be ignored.
-2.	If we know some method can be shared across all class, we can write it as static method in the interface. Those method can’t be overridden but it can also clean up a lot of the code.
+1.	Construction is part of the implementation, not the interface. Any code that works successfully with the interface doesn't care about the [constructor](https://www.geeksforgeeks.org/constructors-in-java/?ref=gcse). Any code that cares about the constructor needs to know the concrete type anyway, and the interface can be ignored.
+2.	If we know some method can be shared across all class, we can write it as static method in the interface. Those method can’t be [overridden](https://www.geeksforgeeks.org/can-we-override-default-method-in-java/?ref=gcse) but it can also clean up a lot of the code.
 
 
 
