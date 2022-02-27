@@ -2,11 +2,11 @@
 
 ## Intro
 
-Similar to blueprints, interfaces define what a class must do rather than how it must do it. It is used to group related methods with empty bodies. An interface is declared with the interface keyword. That is, by default, all methods in an interface have an empty body and are public, while all fields are public, static, and final. To access the interface methods, another class needs to "implement" the interface (similar to inheriting) using the implements keyword (instead of extends). The body of the interface method is provided by the "implement" class.
+Similar to blueprints, [interfaces](https://www.w3schools.com/java/java_interface.asp) define what a class must do rather than how it must do it. It is used to group related methods with empty bodies. An interface is declared with the interface keyword. That is, by default, all methods in an interface have an empty body and are public, while all fields are [public](https://www.geeksforgeeks.org/access-modifiers-java/), [static](https://www.geeksforgeeks.org/static-keyword-java/?ref=gcse), and [final](https://www.geeksforgeeks.org/final-keyword-in-java/?ref=gcse). To access the interface methods, another class needs to "implement" the interface (similar to inheriting) using the implements keyword (instead of extends). The body of the interface method is provided by the "implement" class.
 
 ## Why we need it?
 
-With interfaces, we can achieve loose coupling and security by hiding details and revealing only the critical details of an object. It makes the scaling process so much easier. Additionally, it provides the possibility of "multi-inheritance." Java does not allow the concept of "many inheritance" (a class can only inherit from one parent class). However, with interfaces, the class can now implement multiple interfaces. 
+With interfaces, we can achieve [loose coupling](https://www.geeksforgeeks.org/coupling-in-java/?ref=gcse) and security by hiding details and revealing only the critical details of an object. It makes the scaling process so much easier. Additionally, it provides the possibility of "multi-inheritance." Java does not allow the concept of "many inheritance" (a class can only inherit from one parent class). However, with interfaces, the class can now implement multiple interfaces. 
  
 Interfaces are used to implement abstractions. Thus, a frequently asked question is why we use interfaces when abstract classes are available. The reason is that abstract classes may contain non-final variables, whereas variables in the interface are final, public, and static.
 
