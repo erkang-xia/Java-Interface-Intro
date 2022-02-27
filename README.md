@@ -4,16 +4,16 @@
 
 Similar to blueprints, [interfaces](https://www.w3schools.com/java/java_interface.asp) define what a class must do rather than how it must do it. It is used to group related methods with empty bodies. An interface is declared with the interface keyword. That is, by default, all methods in an interface have an empty body and are public, while all fields are [public](https://www.geeksforgeeks.org/access-modifiers-java/), [static](https://www.geeksforgeeks.org/static-keyword-java/?ref=gcse), and [final](https://www.geeksforgeeks.org/final-keyword-in-java/?ref=gcse). To access the interface methods, another class needs to "implement" the interface (similar to inheriting) using the implements keyword (instead of extends). The body of the interface method is provided by the "implement" class.
 
-## Why we need it?
+## Why do we need it?
 
-With interfaces, we can achieve [loose coupling](https://www.geeksforgeeks.org/coupling-in-java/?ref=gcse) and security by hiding details and revealing only the critical details of an object. It makes the scaling process so much easier. Additionally, it provides the possibility of "multi-[inheritance](https://www.geeksforgeeks.org/inheritance-in-java/?ref=gcse)." Java does not allow the concept of "many inheritance" (a class can only inherit from one parent class). However, with interfaces, the class can now implement multiple interfaces. 
+With interfaces, we can achieve [loose coupling](https://www.geeksforgeeks.org/coupling-in-java/?ref=gcse) and security by revealing only the critical details of an object. It makes the scaling process so much easier. Additionally, it provides the possibility of "multi-[inheritance](https://www.geeksforgeeks.org/inheritance-in-java/?ref=gcse)." Java does not allow the concept of "many inheritance" (a class can only inherit from one parent class). However, with interfaces, the class can now implement multiple interfaces. 
  
 Interfaces are used to implement [abstractions](https://www.geeksforgeeks.org/abstraction-in-java-2/?ref=gcse). Thus, a frequently asked question is why we use interfaces when abstract classes are available. The reason is that abstract classes may contain non-final variables, whereas variables in the interface are final, public, and static.
 
 ## New Features Added in Interfaces in JDK 8
 
-Prior to JDK 8, the interface could not have a method with a body. We can now include default implementations for interface methods, which don’t need to be implemented in the inherited class. Suppose we need to add a new function to an existing interface. Obviously, the old code will not work as the classes have not implemented those new functions. So, with the help of the default implementation, we will provide a default body for the newly added functions. Then the old codes will still work.
-As with static methods in classes, static methods in interfaces may now be defined as well. As with static methods in classes, static methods in an interface may be called independently of any object.Static interface methods are not inherited by implementing classes.
+Prior to JDK 8, the interface could not have a method with a body. We can now include default implementations for interface methods, which don’t need to be implemented in the inherited class. Suppose we need to add a new function to an existing interface. The old code will not work as the classes have not implemented those new functions. So, with the help of the default implementation, we will provide a default body for the newly added functions. Then the old codes will still work.
+As with static methods in classes, static methods in interfaces may now be defined as well. It may be called independently of any object and is not inherited by implementing classes.
 
 
 
@@ -46,7 +46,7 @@ public interface MyInterface {
 
 
 
-### Since we can inherit from multiple interfaces, if two interfaces contained the same static method signature and then a class implemented them both and called that method, then things could become complicated in a way that Java language creators wanted to avoid by disallowing multiple class inheritance in the first place. Same argument could obviously be made for interface not allowing any method definition in them at all. 
+### Since we can inherit from multiple interfaces, if two interfaces contained the same static method signature and then a class implemented them both and called that method, then things could become complicated in a way that Java language creators wanted to avoid by disallowing multiple class inheritance in the first place. Same argument could obviously be made for interface not allowing any method definition in them at all. //put it as Question 
 
 
 1.	You can inherit two interface that has methods with same name and return type. But you can’t two interface that has methods with same name and different return type.
@@ -118,9 +118,9 @@ public class Example implements MyInterface, MyInterface2{
 }
 
 ```
-### why can you define static fields and static inner types within an interface, but not static methods?
+### Why can you define static fields and static inner types within an interface, but not static methods?
 
-It could be the lack of consistency. It is a matter of convenience rather than design or necessity.Static fields are there (a) because they were there in JDK 1.0, and many dodgy decisions were made in JDK 1.0, and (b) static final fields in interfaces are the closest thing java had to constants at the time.
+It could be the lack of consistency. It is a matter of convenience rather than design or necessity.Static fields are there (a) because they were there in JDK 1.0, and many dodgy decisions were made in JDK 1.0, and (b) static final fields in interfaces are the closest thing Java had to constants at the time.
 Static inner classes in interfaces were allowed because that's pure syntactic sugar - the inner class isn't actually anything to do with the parent class.
 So static methods aren't allowed simply because there's no compelling reason to do so; consistency isn't sufficiently compelling to change the status quo.
 Of course, this could be permitted in future JLS versions without breaking anything.
